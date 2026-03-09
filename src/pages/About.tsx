@@ -44,8 +44,8 @@ const About = () => {
                 align="left"
               />
               <p className="text-muted-foreground mb-6 text-lg">
-                Suraj Kumar is currently pursuing an MCA with specialization in 
-                Generative AI from SRM University, Chennai. He is a web developer, 
+                I am currently pursuing an MCA with specialization in 
+                Generative AI from SRM University, Chennai. I am a web developer, 
                 graphic designer, and WordPress developer, with a strong professional 
                 goal of becoming a Gen AI / AI Application Developer.
               </p>
