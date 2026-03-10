@@ -5,6 +5,7 @@ import CertificatesFloatingElements from "@/components/ui/CertificatesFloatingEl
 import { Award, ExternalLink, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import javaBasicCertificate from "@/assets/java_basic_certificate.jpg";
+import pythonBasicCertificate from "@/assets/python_basic certificate.jpg";
 import generativeAiFundamentalCertificate from "@/assets/GenerativeAI_Fundamental.jpg";
 import pythonDataStructureCertificate from "@/assets/Python_dataStructure.jpg";
 import smartCityIntershipCertificate from "@/assets/Tulip_internship_ICCC.jpg";
@@ -31,6 +32,14 @@ const certificates = [
     category: "course" as const,
     description: "Certification validating core Java programming skills including syntax, data types, and object-oriented programming.",
     image: javaBasicCertificate,
+  },
+  {
+    title: "Python Basic Certificate",
+    issuer: "HackerRank",
+    date: "2025",
+    category: "course" as const,
+    description: "Certification validating core Python programming skills including syntax, data types, and object-oriented programming.",
+    image: pythonBasicCertificate,
   },
   {
     title: "Generative AI Fundamentals",
