@@ -35,30 +35,6 @@ const projects = [
     category: "AI",
     image: "", // Add image URL here
   },
-  {
-    id: 4,
-    title: "Smart Chatbot Assistant",
-    description: "AI-powered chatbot for customer support with natural language processing capabilities, context awareness, and seamless integration with web platforms.",
-    tags: ["AI", "NLP", "React"],
-    category: "AI",
-    image: "", // Add image URL here
-  },
-  {
-    id: 5,
-    title: "Brand Identity Package",
-    description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
-    tags: ["Figma", "Branding", "Logo Design"],
-    category: "Design",
-    image: "", // Add image URL here
-  },
-  {
-    id: 6,
-    title: "Corporate Presentation",
-    description: "Professional PowerPoint design for a Fortune 500 company's annual report with engaging visuals and data visualization.",
-    tags: ["PowerPoint", "Data Viz", "Corporate"],
-    category: "Design",
-    image: "", // Add image URL here
-  },
 ];
 
 const Projects = () => {
