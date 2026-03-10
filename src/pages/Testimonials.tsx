@@ -4,45 +4,17 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
+    name: "Pankaj Kumar",
     role: "Business Owner",
     company: "EG Sound World",
     content: "Suraj delivered an exceptional e-commerce website that exceeded our expectations. Professional, responsive, and highly skilled in WordPress development.",
     rating: 5,
   },
   {
-    name: "Dr. Priya Sharma",
+    name: "Soumya Sourya",
     role: "Psychologist",
     company: "Psycho Bubble",
     content: "The psychology services platform Suraj built is fantastic. The booking system and payment integration work flawlessly. Highly recommended!",
-    rating: 5,
-  },
-  {
-    name: "Amit Verma",
-    role: "Startup Founder",
-    company: "TechStart India",
-    content: "Working with Suraj on our AI-powered application was a great experience. He understands both the technical and business aspects perfectly.",
-    rating: 5,
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Marketing Director",
-    company: "Global Brands Co.",
-    content: "Suraj's graphic design work transformed our brand identity. His creativity and attention to detail are remarkable. Will definitely work together again.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "CEO",
-    company: "InnovateTech",
-    content: "The presentation designs Suraj created helped us secure major funding. Professional, impactful, and delivered on time. Excellent work!",
-    rating: 5,
-  },
-  {
-    name: "Neha Gupta",
-    role: "Product Manager",
-    company: "FinTech Solutions",
-    content: "Suraj built a beautiful and functional web application for our fintech startup. His React skills are top-notch and he's great to work with.",
     rating: 5,
   },
 ];
