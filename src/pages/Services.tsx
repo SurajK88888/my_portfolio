@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/ui/SEOHead";
 import SectionTitle from "@/components/ui/SectionTitle";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ServicesFloatingElements from "@/components/ui/ServicesFloatingElements";
@@ -39,6 +40,7 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <SEOHead title="Services" description="What I can do for you. From Gen AI to full stack web development." />
       <section className="py-24 relative overflow-hidden">
         <ServicesFloatingElements />
         <div className="container mx-auto px-4 relative z-10">

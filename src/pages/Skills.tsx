@@ -1,65 +1,106 @@
+// ============================================================
+// Skills.tsx — Skills page using icon cards instead of progress bars.
+// To add/remove skills: edit the skillCategories array below.
+// ============================================================
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/ui/SEOHead";
 import SectionTitle from "@/components/ui/SectionTitle";
-import SkillBar from "@/components/ui/SkillBar";
+import SkillIconCard from "@/components/ui/SkillIconCard";
 import SkillsFloatingElements from "@/components/ui/SkillsFloatingElements";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
+// ── All skills data — edit here to add/remove/change level ───
 const skillCategories = [
   {
     title: "Programming Languages",
+    icon: "💻",
     skills: [
-      { name: "JavaScript / TypeScript", percentage: 88 },
-      { name: "Python", percentage: 82 },
-      { name: "Java", percentage: 75 },
-      { name: "HTML / CSS", percentage: 95 },
+      { icon: "🟨", name: "JavaScript", level: "Expert" as const },
+      { icon: "🔷", name: "TypeScript", level: "Advanced" as const },
+      { icon: "🐍", name: "Python", level: "Advanced" as const },
+      { icon: "☕", name: "Java", level: "Intermediate" as const },
+      { icon: "🌐", name: "HTML / CSS", level: "Expert" as const },
+      { icon: "➕", name: "C / C++", level: "Intermediate" as const },
     ],
   },
   {
     title: "Frontend Development",
+    icon: "🎨",
     skills: [
-      { name: "React.js", percentage: 90 },
-      { name: "Tailwind CSS", percentage: 92 },
-      { name: "Bootstrap", percentage: 85 },
-      { name: "Next.js", percentage: 78 },
+      { icon: "⚛️", name: "React.js", level: "Expert" as const },
+      { icon: "▲", name: "Next.js", level: "Advanced" as const },
+      { icon: "💨", name: "Tailwind CSS", level: "Expert" as const },
+      { icon: "🅱️", name: "Bootstrap", level: "Advanced" as const },
+      { icon: "🖌️", name: "Figma", level: "Advanced" as const },
+      { icon: "🎭", name: "Framer Motion", level: "Intermediate" as const },
     ],
   },
   {
     title: "Backend & Database",
+    icon: "⚙️",
     skills: [
-      { name: "Node.js / Express.js", percentage: 80 },
-      { name: "MongoDB", percentage: 82 },
-      { name: "REST APIs", percentage: 85 },
-      { name: "WordPress Development", percentage: 90 },
+      { icon: "🟩", name: "Node.js", level: "Advanced" as const },
+      { icon: "🚂", name: "Express.js", level: "Advanced" as const },
+      { icon: "🍃", name: "MongoDB", level: "Advanced" as const },
+      { icon: "🔗", name: "REST APIs", level: "Expert" as const },
+      { icon: "🔐", name: "JWT / Auth", level: "Advanced" as const },
+      { icon: "🐘", name: "SQL Basics", level: "Intermediate" as const },
     ],
   },
   {
-    title: "AI & Tools",
+    title: "AI & Generative AI",
+    icon: "🤖",
     skills: [
-      { name: "AI Application Development", percentage: 85 },
-      { name: "AI Tools (ChatGPT, Claude, etc.)", percentage: 92 },
-      { name: "Matplotlib", percentage: 75 },
-      { name: "Git & GitHub", percentage: 88 },
+      { icon: "🧠", name: "AI App Dev", level: "Advanced" as const },
+      { icon: "✨", name: "OpenAI / GPT", level: "Advanced" as const },
+      { icon: "🦜", name: "LangChain", level: "Intermediate" as const },
+      { icon: "🔬", name: "Gen AI Concepts", level: "Advanced" as const },
+      { icon: "📊", name: "Matplotlib", level: "Intermediate" as const },
+      { icon: "🛠️", name: "AI Tools (Claude, etc.)", level: "Expert" as const },
     ],
   },
   {
-    title: "Design",
+    title: "WordPress & CMS",
+    icon: "🌍",
     skills: [
-      { name: "Figma", percentage: 80 },
-      { name: "Canva", percentage: 90 },
-      { name: "Graphic Design", percentage: 85 },
-      { name: "PPT Design", percentage: 88 },
+      { icon: "🔵", name: "WordPress Dev", level: "Expert" as const },
+      { icon: "🛒", name: "WooCommerce", level: "Expert" as const },
+      { icon: "🔌", name: "Plugin Dev", level: "Advanced" as const },
+      { icon: "🎨", name: "Theme Customization", level: "Expert" as const },
+    ],
+  },
+  {
+    title: "Design & Tools",
+    icon: "🖼️",
+    skills: [
+      { icon: "🎨", name: "Canva", level: "Expert" as const },
+      { icon: "✏️", name: "Graphic Design", level: "Advanced" as const },
+      { icon: "📊", name: "PPT Design", level: "Expert" as const },
+      { icon: "🐙", name: "Git / GitHub", level: "Advanced" as const },
+      { icon: "☁️", name: "Vercel / Netlify", level: "Advanced" as const },
     ],
   },
 ];
 
-const techStack = [
-  "React", "Node.js", "Express.js", "MongoDB", "TypeScript", "Python",
-  "Tailwind CSS", "WordPress", "Figma", "Git", "GitHub", "REST APIs",
-  "AI Tools", "Generative AI", "Canva", "Bootstrap", "Java", "Matplotlib"
-];
+// ── Animated section wrapper ──────────────────────────────────
+const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
 
 const Skills = () => {
   return (
     <Layout>
+      <SEOHead title="Skills" description="My technical skills and tools." />
       <section className="py-24 relative overflow-hidden">
         <SkillsFloatingElements />
         <div className="container mx-auto px-4 relative z-10">
@@ -69,32 +110,30 @@ const Skills = () => {
             subtitle="Technologies and tools I work with to build amazing products"
           />
 
-          {/* Tech Stack Pills */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium hover:border-primary hover:text-primary transition-colors cursor-default"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          {/* Skill categories grid */}
+          <div className="space-y-12">
+            {skillCategories.map((category) => (
+              <AnimatedSection key={category.title}>
+                <div className="p-6 bg-card/50 border border-border rounded-2xl">
+                  {/* Category header */}
+                  <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+                    <span>{category.icon}</span>
+                    <span className="text-primary">{category.title}</span>
+                  </h3>
 
-          {/* Skill Bars by Category */}
-          <div className="grid md:grid-cols-2 gap-12">
-            {skillCategories.map((category, categoryIndex) => (
-              <div key={category.title} className="p-6 bg-card rounded-xl border border-border">
-                <h3 className="text-xl font-bold mb-6 text-primary">{category.title}</h3>
-                {category.skills.map((skill, skillIndex) => (
-                  <SkillBar
-                    key={skill.name}
-                    name={skill.name}
-                    percentage={skill.percentage}
-                    delay={(categoryIndex * 4 + skillIndex) * 100}
-                  />
-                ))}
-              </div>
+                  {/* Skills grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    {category.skills.map((skill) => (
+                      <SkillIconCard
+                        key={skill.name}
+                        icon={skill.icon}
+                        name={skill.name}
+                        level={skill.level}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

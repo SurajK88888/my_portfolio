@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/ui/SEOHead";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
@@ -20,6 +21,7 @@ const Resume = () => {
 
   return (
     <Layout>
+      <SEOHead title="Resume" description="View and download my professional resume." />
       <section className="py-24">
         <div className="container mx-auto px-4">
           <SectionTitle

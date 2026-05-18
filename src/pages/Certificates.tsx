@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/ui/SEOHead";
 import SectionTitle from "@/components/ui/SectionTitle";
 import CertificatesFloatingElements from "@/components/ui/CertificatesFloatingElements";
 import { Award, ExternalLink, X } from "lucide-react";
@@ -132,6 +133,7 @@ const Certificates = () => {
 
   return (
     <Layout>
+      <SEOHead title="Certificates" description="Professional certifications and achievements in AI, Web Development, and more." />
       <section className="py-24 relative overflow-hidden">
         <CertificatesFloatingElements />
         <div className="container mx-auto px-4 relative z-10">

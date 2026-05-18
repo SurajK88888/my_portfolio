@@ -5,44 +5,56 @@
 @tailwind utilities;
 
 @layer base {
+  /* ── Dark mode (default) ─────────────────────────────────── */
   :root {
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
-
     --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
-
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
-
     --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
-
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
-
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
-
     --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 24 100% 50%;
-
     --radius: 0.75rem;
-
-    /* Custom tokens */
     --glow-primary: 0 0 40px hsl(24 100% 50% / 0.4);
     --glow-strong: 0 0 60px hsl(24 100% 50% / 0.6);
     --gradient-primary: linear-gradient(135deg, hsl(24 100% 50%), hsl(30 100% 60%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 4%));
   }
 
+  /* ── Light mode overrides (applied when .dark is NOT on <html>) ── */
+  :root:not(.dark) {
+    --background: 0 0% 97%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 24 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 24 100% 45%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 24 100% 45%;
+  }
+
+  /* Keep .dark as explicit class for Tailwind dark: utilities */
   .dark {
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;

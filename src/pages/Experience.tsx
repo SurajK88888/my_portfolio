@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/ui/SEOHead";
 import SectionTitle from "@/components/ui/SectionTitle";
 import ExperienceFloatingElements from "@/components/ui/ExperienceFloatingElements";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
@@ -61,6 +62,7 @@ const experiences = [
 const Experience = () => {
   return (
     <Layout>
+      <SEOHead title="Experience" description="My professional experience and internships." />
       <section className="py-24 relative overflow-hidden">
         <ExperienceFloatingElements />
         <div className="container mx-auto px-4 relative z-10">
