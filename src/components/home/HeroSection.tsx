@@ -8,7 +8,7 @@ import TypeWriter from "@/components/ui/TypeWriter";
 import FloatingElements from "@/components/ui/FloatingElements";
 import TechBadge from "@/components/ui/TechBadge";
 import profileImage from "@/assets/profile.jpg";
-import resumePdf from "@/assets/resume_suraj_kumar.pdf";
+import resumePdf from "@/assets/Resume-Suraj.pdf";
 
 const roles = ["Gen AI Developer", "AI Application Developer", "Full Stack Developer", "WordPress Expert", "Graphic Designer"];
 
