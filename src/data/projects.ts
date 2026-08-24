@@ -228,7 +228,7 @@ export const projects: Project[] = [
     "Lovable",
     "AI-Assisted Development"
   ],
-  category: "HealthTech",
+  category: "Web",
   github:
     "https://github.com/SurajK88888/wellness-health",
   link: "",
