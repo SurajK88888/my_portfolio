@@ -71,9 +71,8 @@ const Resume = () => {
                 <div>
                   <h5 className="font-semibold mb-2">Experience</h5>
                   <ul className="space-y-2 text-muted-foreground text-sm">
-                    <li>• 3+ years Web Development</li>
+                    <li>• 1+ years Web Development</li>
                     <li>• 2+ years WordPress Development</li>
-                    <li>• Freelance Graphic Designer</li>
                     <li>• AI Application Development</li>
                   </ul>
                 </div>
