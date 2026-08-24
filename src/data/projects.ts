@@ -206,6 +206,41 @@ export const projects: Project[] = [
   developmentApproach:
     "AI-Assisted Engineering — Leveraged Antigravity and Codex throughout development for architecture assistance, implementation, debugging, refactoring, optimization, and problem solving."
 },
+  {
+  id: "wellness-health",
+  title: "Wellness Health — Health & Consultation Platform",
+  shortDescription:
+    "An AI-assisted wellness platform built with Lovable, enabling users to explore health content, book consultations, manage profiles, and receive notifications.",
+  fullDescription:
+    "A full-stack wellness and health platform created using Lovable as an AI-assisted development workflow. The application provides health guides and blog content, searchable and filterable resources, consultation booking, user authentication, profile management, and notifications. It also includes protected routes and an admin dashboard for managing platform content and operations. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui, while Supabase supports backend services and includes a booking-notification function.",
+  tags: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Supabase",
+    "PostgreSQL",
+    "Authentication",
+    "HealthTech",
+    "Consultation Booking",
+    "Admin Dashboard",
+    "Lovable",
+    "AI-Assisted Development"
+  ],
+  category: "HealthTech",
+  github:
+    "https://github.com/SurajK88888/wellness-health",
+  link: "",
+  image: "",
+  challenge:
+    "Wellness users need a single, accessible place to discover reliable health content, manage their account, and request consultations.",
+  solution:
+    "Built a role-aware wellness platform with health guides, blog posts, search and category filtering, consultation booking, user profiles, notifications, and administrative management tools.",
+  outcome:
+    "Delivered a modern full-stack health platform with a structured user journey from content discovery to consultation booking, accelerated through Lovable-assisted development.",
+  year: "2025"
+},
    {
     id: "egsoundworld",
     title: "EG Sound World",
