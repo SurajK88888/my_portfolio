@@ -16,6 +16,7 @@ import workshopCertificateGenAItoAgenticAi from "@/assets/Workshop_Certificate_G
 import candCplusplusCertificate from "@/assets/C_and_CplusplusCertificate.jpg";
 import aiToolWorkshop from "@/assets/Ai_Tool_Workshop_certificate.jpg";
 import genAiandOpenAiBasic from "@/assets/GenAI_and_OpenAI_basic.jpg";
+import platlapInternship from "@/assets/Platlap-Internship-Suraj_.jpg";
 
 import {
   Dialog,
@@ -26,6 +27,14 @@ import {
 type CertificateCategory = "all" | "course" | "internship";
 
 const certificates = [
+   {
+    title: "Software Developement Certificate",
+    issuer: "Platlap",
+    date: "1 May-2026 to 30 Jun-2026",
+    category: "internship" as const,
+    description: "Certification validating for the development of a Backtesting Tool for Indicators and Signals, supporting data collection, signal validation, and core tool development for technical stock-market indicators.",
+    image: platlapInternship,
+  },
   {
     title: "Java Basic Certificate",
     issuer: "HackerRank",
