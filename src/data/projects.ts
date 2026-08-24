@@ -10,7 +10,7 @@ export interface Project {
   shortDescription: string;
   fullDescription: string;
   tags: string[];
-  category: "Web" | "AI" | "Design";
+  category: "Web" | "AI" | "Design" | "Plugin" | "SaaS";
   link?: string;           // Live site URL
   github?: string;         // GitHub repo URL
   image?: string;          // Preview image path (add later)
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     "PSR-4",
     "SaaS"
   ],
-  category: "WordPress",
+  category: "Plugin",
   github:
     "https://github.com/SurajK88888/Custom-Blogging-Plugin",
   link: "",
@@ -106,7 +106,36 @@ export const projects: Project[] = [
   outcome:
     "Built a SaaS-style WordPress blog management solution that brings content management, marketing, advertising, analytics, access control, and frontend customization into a unified plugin. The project demonstrates practical WordPress plugin development, PHP architecture, Composer/PSR-4 autoloading, admin dashboard development, and the design of extensible WordPress-based software.",
   year: "2026",
-}, 
+},
+  {
+  id: "event-logging-wp-plugin",
+  title: "Event Logging — WordPress Plugin",
+  shortDescription:
+    "A WordPress plugin for recording and reviewing website events, built to improve visibility into site activity and simplify debugging.",
+  fullDescription:
+    "A WordPress event-logging plugin designed to capture important site activity in a structured, accessible way. The project focuses on helping WordPress administrators monitor events, investigate issues, and maintain clearer operational records from within the WordPress environment. AI-assisted development tools, including Antigravity and Codex, were used to accelerate implementation, debugging, and refinement.",
+  tags: [
+    "WordPress",
+    "PHP",
+    "WordPress Plugin",
+    "Event Logging",
+    "Debugging",
+    "Website Monitoring",
+    "AI-Assisted Development"
+  ],
+  category: "Plugin",
+  github:
+    "https://github.com/SurajK88888/Event-Logging-Wp-Plugin",
+  link: "",
+  image: "",
+  challenge:
+    "WordPress site activity can be difficult to trace when events and operational details are not recorded in one clear location.",
+  solution:
+    "Built a dedicated WordPress plugin that provides an event-logging foundation for capturing and reviewing relevant site activity.",
+  outcome:
+    "Created a reusable WordPress plugin project that supports improved site observability and a more streamlined debugging workflow.",
+  year: "2026"
+},
 {
   id: "real-time-chat-application",
   title: "Real-Time Chat Application",
@@ -139,7 +168,7 @@ export const projects: Project[] = [
 },
   {
   id: "stock-indicator-testing-tool",
-  title: "Sovereign Ledger Terminal — Stock Indicator Testing Tool",
+  title: "Stock Indicator Testing Tool",
   shortDescription:
     "A full-stack stock indicator backtesting platform developed during an internship at Platlap, using AI-assisted engineering to process Indian market data, validate trading signals, and calculate realistic trade performance.",
   fullDescription:
@@ -160,7 +189,7 @@ export const projects: Project[] = [
     "Data Processing",
     "AI-Assisted Development"
   ],
-  category: "FinTech",
+  category: "SaaS",
   github:
     "https://github.com/SurajK88888/stock-indicator-testing-tool",
   link: "",
@@ -199,5 +228,5 @@ export const projects: Project[] = [
 ];
 
 // All filter categories — add new ones here if you add new project categories
-export const projectCategories = ["All", "Web", "AI", "Design"] as const;
+export const projectCategories = ["All", "Web", "AI", "Design","Plugin","SaaS"] as const;
 export type ProjectCategory = (typeof projectCategories)[number];
