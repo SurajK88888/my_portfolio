@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { Download, FileText, Eye, X } from "lucide-react";
-import resumePdf from "@/assets/resume_suraj_kumar.pdf";
+import resumePdf from "@/assets/Resume-Suraj.pdf";
 
 const Resume = () => {
   const [showResume, setShowResume] = useState(false);
