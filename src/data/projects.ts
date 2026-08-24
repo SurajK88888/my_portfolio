@@ -231,7 +231,7 @@ export const projects: Project[] = [
   category: "Web",
   github:
     "https://github.com/SurajK88888/wellness-health",
-  link: "",
+  link: "https://wellness-health-mu.vercel.app/",
   image: "",
   challenge:
     "Wellness users need a single, accessible place to discover reliable health content, manage their account, and request consultations.",
